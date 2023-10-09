@@ -1,0 +1,40 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.footer{
+  display:flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  margin-top: 95px;
+  width: 100vw;
+  height: 40vh;
+}
+.address{
+  display:flex;
+  width: 50vw;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.links{
+  display:flex;
+  justify-content: center;
+  font-size: 33px;
+}
+.links ul li a{
+  color: black;
+}
+
+
+@media screen and (max-width:768px){
+  .address{
+    flex-direction: column;
+    margin: 0 auto;
+    width: 75vw;
+    align-items: start;
+    justify-content: start;
+  }
+
+}
