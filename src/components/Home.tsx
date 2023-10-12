@@ -24,11 +24,10 @@ function Home() {
         <div className="modal">
           <div onClick={toggleModal} className="overlay">
             <div className="modal-content">
-              <Modal open={modal} />
-              {/* <button
-            className='close-modal'
-            onClick={toggleModal}
-            >X</button> */}
+              <Modal open={modal} onClose={() => {}} />
+              {/* Alternatively, you can define an empty function separately:
+               * const emptyFunction = () => {};
+               * And pass it like this: <Modal open={modal} onClose={emptyFunction} /> */}
             </div>
           </div>
         </div>

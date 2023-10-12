@@ -12,11 +12,10 @@ const Navbar = () => {
   window.addEventListener("resize", () => {
     if (window.innerWidth <= 768 && !mobile) {
       setMobile(true);
-    }else if(window.innerWidth >= 768 && mobile){
-      setMobile(false)
+    } else if (window.innerWidth >= 768 && mobile) {
+      setMobile(false);
     }
   });
-
 
   const changeBackground = () => {
     if (window.scrollY >= 80) {
@@ -48,30 +47,31 @@ const Navbar = () => {
                   style={{ width: "5rem", height: "5rem", marginRight: "30px" }}
                 />
               </div>
-              <> <ul
-                className="tabs"
-                style={!menuOpened ? { display: "none" } : {}}
-              >
-                <Link to="/">
-                  <li className="menu-tabs">Home</li>
-                </Link>
-                <Link to="/about">
-                  <li className="menu-tabs">About</li>
-                </Link>
-                <Link to="/products">
-                  <li className="menu-tabs">Products</li>
-                </Link>
-                <Link to="/contact">
-                  <li className="menu-tabs">Contact</li>
-                </Link>
-              </ul></>
-             
+              <>
+                {" "}
+                <ul
+                  className="tabs"
+                  style={!menuOpened ? { display: "none" } : {}}
+                >
+                  <Link to="/">
+                    <li className="menu-tabs">Home</li>
+                  </Link>
+                  <Link to="/about">
+                    <li className="menu-tabs">About</li>
+                  </Link>
+                  <Link to="/products">
+                    <li className="menu-tabs">Products</li>
+                  </Link>
+                  <Link to="/contact">
+                    <li className="menu-tabs">Contact</li>
+                  </Link>
+                </ul>
+              </>
             </>
           ) : (
-            <> <ul
-                className="tabs"
-               
-              >
+            <>
+              {" "}
+              <ul className="tabs">
                 <Link to="/">
                   <li className="menu-tabs">Home</li>
                 </Link>
@@ -84,7 +84,8 @@ const Navbar = () => {
                 <Link to="/contact">
                   <li className="menu-tabs">Contact</li>
                 </Link>
-              </ul></>
+              </ul>
+            </>
           )}
         </nav>
       </div>

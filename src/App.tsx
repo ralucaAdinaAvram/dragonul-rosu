@@ -7,14 +7,25 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "../src/components/Navbar";
 import Footer from "./components/Footer";
 
-function App() {
+interface Product {
+  name: string;
+  price: number;
+}
+
+function App(): JSX.Element {
+  const product: Product = {
+    name: "Example Product",
+    price: 100.0,
+  };
+
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />} />
+        {/* Pass the product as a prop to Products component */}
+        <Route path="/products" element={<Products product={product} />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
